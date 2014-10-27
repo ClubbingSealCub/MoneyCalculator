@@ -1,15 +1,15 @@
-package moneycalculator;
+package model;
 
-public class Amount {
+public class Exchange {
 
     private Number amount;
     private Currency currency;
 
-    public Amount(Number amount, Currency currency) {
+    public Exchange(Number amount, Currency currency) {
         this.amount = amount;
         this.currency = currency;
     }
-    
+
     public Number getAmount() {
         return amount;
     }
@@ -25,5 +25,5 @@ public class Amount {
     public void setCurrency(Currency currency) {
         this.currency = currency;
     }
-    
+
 }
