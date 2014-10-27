@@ -1,10 +1,11 @@
 package model;
 
+import java.util.Iterator;
 import java.util.Set;
 
-public class CurrencySet {
+public class CurrencySet implements Iterable {
 
-    static Set<Currency> currencySet;
+    public static Set<Currency> currencySet;
 
     public CurrencySet(Set<Currency> currencySet) {
         this.currencySet = currencySet;
@@ -23,5 +24,26 @@ public class CurrencySet {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Iterator iterator() {
+        return new Iterator() {
+            int i = 0;
+
+            @Override
+            public boolean hasNext() {
+                if (currencySet.size() < i) {
+                    return true;
+                }
+                return false;
+            }
+
+            @Override
+            public Object next() {
+                i++;
+                return currencySet.toArray()[i];
+            }
+        };
     }
 }
