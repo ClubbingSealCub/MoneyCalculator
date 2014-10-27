@@ -1,7 +1,10 @@
 package process;
 
+import model.Money;
+
 public class Exchanger {
-    public Number exchangeAmount(model.ExchangeRate rate, model.Exchange amount){
-        return amount.getAmount().floatValue()*rate.getRate().floatValue();
+
+    public Money exchangeAmount(model.Money money, model.ExchangeRate exchangeRate) {
+        return new Money(money.getAmount().multiply(exchangeRate.getRate()), exchangeRate.getTo());
     }
 }

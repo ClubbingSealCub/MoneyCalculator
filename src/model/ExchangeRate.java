@@ -4,9 +4,9 @@ public class ExchangeRate {
 
     private Currency from;
     private Currency to;
-    private Number rate;
+    private Fraction rate;
 
-    public ExchangeRate(Currency from, Currency to, Number rate) {
+    public ExchangeRate(Currency from, Currency to, Fraction rate) {
         this.from = from;
         this.to = to;
         this.rate = rate;
@@ -20,7 +20,7 @@ public class ExchangeRate {
         return to;
     }
 
-    public Number getRate() {
+    public Fraction getRate() {
         return rate;
     }
 
@@ -32,7 +32,7 @@ public class ExchangeRate {
         this.to = to;
     }
 
-    public void setRate(Number rate) {
+    public void setRate(Fraction rate) {
         this.rate = rate;
     }
     

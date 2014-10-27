@@ -2,24 +2,20 @@ package model;
 
 public class Exchange {
 
-    private Number amount;
+    private Money money;
     private Currency currency;
 
-    public Exchange(Number amount, Currency currency) {
-        this.amount = amount;
+    public Exchange(Money amount, Currency currency) {
+        this.money = amount;
         this.currency = currency;
     }
 
-    public Number getAmount() {
-        return amount;
+    public Money getMoney() {
+        return money;
     }
-
+    
     public Currency getCurrency() {
         return currency;
-    }
-
-    public void setAmount(Number amount) {
-        this.amount = amount;
     }
 
     public void setCurrency(Currency currency) {
