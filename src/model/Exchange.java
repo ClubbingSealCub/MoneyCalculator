@@ -2,7 +2,7 @@ package model;
 
 public class Exchange {
 
-    private Money money;
+    private final Money money;
     private Currency currency;
 
     public Exchange(Money amount, Currency currency) {
