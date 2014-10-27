@@ -1,6 +1,5 @@
 package persistence;
 
-import java.util.Set;
 import model.Currency;
 import model.CurrencySet;
 
