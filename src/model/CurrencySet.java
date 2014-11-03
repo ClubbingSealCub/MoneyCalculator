@@ -50,9 +50,9 @@ public class CurrencySet implements Iterable {
             }
 
             @Override
-            public Object next() {
+            public Currency next() {
                 i++;
-                return currencySet.toArray()[i];
+                return (Currency) currencySet.toArray()[i];
             }
         };
     }

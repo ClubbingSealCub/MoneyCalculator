@@ -26,6 +26,15 @@ public class ExchangeRateSet implements Iterable {
         return false;
     }
 
+    public Fraction findRate(Currency from, Currency to) {
+        for (ExchangeRate rate : exchangeRateSet) {
+            if (rate.getFrom() == from && rate.getTo() == to) {
+                return rate.getRate();
+            }
+        }
+        return new Fraction(1,1);
+    }
+
     @Override
     public Iterator iterator() {
         return new Iterator() {
@@ -40,9 +49,9 @@ public class ExchangeRateSet implements Iterable {
             }
 
             @Override
-            public Object next() {
+            public ExchangeRate next() {
                 i++;
-                return exchangeRateSet.toArray()[i];
+                return (ExchangeRate) exchangeRateSet.toArray()[i];
             }
         };
     }
