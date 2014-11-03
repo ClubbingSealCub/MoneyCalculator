@@ -8,7 +8,7 @@ public class ExchangeRateSet implements Iterable {
     public static Set<ExchangeRate> exchangeRateSet;
 
     public ExchangeRateSet(Set<ExchangeRate> exchangeRateSet) {
-        this.exchangeRateSet = exchangeRateSet;
+        ExchangeRateSet.exchangeRateSet = exchangeRateSet;
     }
 
     public boolean add(ExchangeRate exchangeRate) {
@@ -20,16 +20,16 @@ public class ExchangeRateSet implements Iterable {
     }
 
     public boolean contains(ExchangeRate exchangeRate) {
-        if (exchangeRateSet.contains(exchangeRate)) {
-            return true;
-        }
-        return false;
+        return exchangeRateSet.contains(exchangeRate);
     }
 
     public Fraction findRate(String from, String to) {
         for (ExchangeRate rate : exchangeRateSet) {
-            if (rate.getFrom().getName() == from && rate.getTo().getName() == to) {
+            if (rate.getFrom().getName().equals(from) && rate.getTo().getName().equals(to)) {
                 return rate.getRate();
+            } else if (rate.getFrom().getName().equals(to) && rate.getTo().getName().equals(from)){
+                Fraction a = new Fraction(1,1);
+                return a.divide(rate.getRate());
             }
         }
         return new Fraction(1,1);
