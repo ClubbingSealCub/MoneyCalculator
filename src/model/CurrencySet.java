@@ -8,7 +8,7 @@ public class CurrencySet implements Iterable {
     public static Set<Currency> currencySet;
 
     public CurrencySet(Set<Currency> currencySet) {
-        this.currencySet = currencySet;
+        CurrencySet.currencySet = currencySet;
     }
 
     public boolean add(Currency currency) {
@@ -20,13 +20,9 @@ public class CurrencySet implements Iterable {
     }
 
     public boolean contains(Currency currency) {
-        if (currencySet.contains(currency)) {
-            return true;
-        }
-        return false;
+        return currencySet.contains(currency);
     }
-    
-    
+
     public static String[] toCurrencyString() {
         String[] currencies = new String[CurrencySet.currencySet.size()];
         int i = 0;
@@ -43,7 +39,7 @@ public class CurrencySet implements Iterable {
 
             @Override
             public boolean hasNext() {
-                if (currencySet.size() < i) {
+                if (currencySet.size() > i) {
                     return true;
                 }
                 return false;

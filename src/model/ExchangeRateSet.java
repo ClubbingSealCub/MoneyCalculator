@@ -26,9 +26,9 @@ public class ExchangeRateSet implements Iterable {
         return false;
     }
 
-    public Fraction findRate(Currency from, Currency to) {
+    public Fraction findRate(String from, String to) {
         for (ExchangeRate rate : exchangeRateSet) {
-            if (rate.getFrom() == from && rate.getTo() == to) {
+            if (rate.getFrom().getName() == from && rate.getTo().getName() == to) {
                 return rate.getRate();
             }
         }
