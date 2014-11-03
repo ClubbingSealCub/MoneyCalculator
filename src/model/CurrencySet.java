@@ -25,6 +25,16 @@ public class CurrencySet implements Iterable {
         }
         return false;
     }
+    
+    
+    public static String[] toCurrencyString() {
+        String[] currencies = new String[CurrencySet.currencySet.size()];
+        int i = 0;
+        for (Currency currency : CurrencySet.currencySet) {
+            currencies[i] = currency.getName();
+        }
+        return currencies;
+    }
 
     @Override
     public Iterator iterator() {
