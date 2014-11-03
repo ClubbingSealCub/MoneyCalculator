@@ -55,6 +55,8 @@ public class Fraction {
     public String toString() {
         if (num > den && den > 1) {
             return (num + "/" + den + " or " + (num / den) + " " + (num % den) + "/" + den);
+        } else if (den == 1) {
+            return (Integer.toString(num));
         } else {
             return (num + "/" + den);
         }
