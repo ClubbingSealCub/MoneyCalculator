@@ -1,10 +1,11 @@
 package process;
 
+import model.ExchangeRate;
 import model.Money;
 
 public class Exchanger {
 
-    public Money exchangeAmount(model.Money money, model.ExchangeRate exchangeRate) {
+    public Money exchangeAmount(Money money, ExchangeRate exchangeRate) {
         return new Money(money.getAmount().multiply(exchangeRate.getRate()), exchangeRate.getTo());
     }
 }

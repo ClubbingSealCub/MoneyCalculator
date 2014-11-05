@@ -11,7 +11,7 @@ public class CurrencySet implements Iterable {
         CurrencySet.currencySet = currencySet;
     }
 
-    public boolean add(Currency currency) {
+    public static boolean add(Currency currency) {
         return currencySet.add(currency);
     }
 

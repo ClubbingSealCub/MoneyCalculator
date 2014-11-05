@@ -6,7 +6,7 @@ import model.CurrencySet;
 public class CurrencySetLoader {
     public void loadSet(CurrencySet source){
         for (Object currency : source) {
-            boolean add = CurrencySet.currencySet.add((Currency) currency); 
+            boolean add = CurrencySet.add((Currency) currency); 
             
         }
     }

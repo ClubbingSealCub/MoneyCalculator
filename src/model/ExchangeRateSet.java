@@ -8,11 +8,11 @@ public class ExchangeRateSet implements Iterable {
     public static Set<ExchangeRate> exchangeRateSet;
 
     public ExchangeRateSet(Set<ExchangeRate> exchangeRateSet) {
-        ExchangeRateSet.exchangeRateSet = exchangeRateSet;
+        exchangeRateSet = exchangeRateSet;
     }
 
-    public boolean add(ExchangeRate exchangeRate) {
-        return exchangeRateSet.add(exchangeRate);
+    public static boolean add(ExchangeRate exchangeRate) {
+        return exchangeRateSet.add((ExchangeRate) exchangeRate);
     }
 
     public void delete(ExchangeRate exchangeRate) {
