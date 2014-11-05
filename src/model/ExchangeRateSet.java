@@ -2,6 +2,7 @@ package model;
 
 import java.util.Iterator;
 import java.util.Set;
+import model.ExchangeRate;
 
 public class ExchangeRateSet implements Iterable {
 
@@ -23,16 +24,16 @@ public class ExchangeRateSet implements Iterable {
         return exchangeRateSet.contains(exchangeRate);
     }
 
-    public Fraction findRate(String from, String to) {
+    public static ExchangeRate findRate(Currency from, Currency to) {
         for (ExchangeRate rate : exchangeRateSet) {
             if (rate.getFrom().getName().equals(from) && rate.getTo().getName().equals(to)) {
-                return rate.getRate();
+                return rate;
             } else if (rate.getFrom().getName().equals(to) && rate.getTo().getName().equals(from)){
                 Fraction a = new Fraction(1,1);
-                return a.divide(rate.getRate());
+                return new ExchangeRate(from, to, a.divide(rate.getRate()));
             }
         }
-        return new Fraction(1,1);
+        return new ExchangeRate(from, to, new Fraction(1,1));
     }
 
     @Override
