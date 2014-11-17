@@ -19,9 +19,9 @@ public class CurrencySet implements Iterable {
         currencySet.remove(currency);
     }
 
-    public Currency getCurrency(String currencyName) {
+    public Currency getCurrency(String currencyCode) {
         for (Currency currency : currencySet) {
-            if(currency.getName() == null ? currencyName == null : currency.getName().equals(currencyName)){
+            if(currency.getCode() == null ? currencyCode == null : currency.getName().equals(currencyCode)){
                 return currency;
             }
         }
