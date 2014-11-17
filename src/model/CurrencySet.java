@@ -5,13 +5,13 @@ import java.util.Set;
 
 public class CurrencySet implements Iterable {
 
-    public static Set<Currency> currencySet;
+    public Set<Currency> currencySet;
 
     public CurrencySet(Set<Currency> currencySet) {
-        CurrencySet.currencySet = currencySet;
+        this.currencySet = currencySet;
     }
 
-    public static boolean add(Currency currency) {
+    public boolean add(Currency currency) {
         return currencySet.add(currency);
     }
 
@@ -19,14 +19,19 @@ public class CurrencySet implements Iterable {
         currencySet.remove(currency);
     }
 
-    public boolean contains(Currency currency) {
-        return currencySet.contains(currency);
+    public Currency getCurrency(String currencyName) {
+        for (Currency currency : currencySet) {
+            if(currency.getName() == null ? currencyName == null : currency.getName().equals(currencyName)){
+                return currency;
+            }
+        }
+        return null;
     }
 
-    public static String[] toCurrencyString() {
-        String[] currencies = new String[CurrencySet.currencySet.size()];
+    public String[] toCurrencyString() {
+        String[] currencies = new String[currencySet.size()];
         int i = 0;
-        for (Currency currency : CurrencySet.currencySet) {
+        for (Currency currency : currencySet) {
             currencies[i] = currency.getName();
         }
         return currencies;

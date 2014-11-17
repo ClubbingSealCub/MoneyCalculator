@@ -1,4 +1,4 @@
-package command;
+package control;
 
 import model.Currency;
 import model.ExchangeRateSet;
