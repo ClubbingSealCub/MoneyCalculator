@@ -15,8 +15,8 @@ public class ExchangeRateLoader {
     }
 
     public static void loadSetMock(CurrencySet currencySet) {
-        ExchangeRateSet.add(new ExchangeRate(currencySet.getCurrency("Euro"), currencySet.getCurrency("American Dollar"), new Fraction(10, 16)));
-        ExchangeRateSet.add(new ExchangeRate(currencySet.getCurrency("Sterling Pound"), currencySet.getCurrency("Euro"), new Fraction(10, 14)));
-        ExchangeRateSet.add(new ExchangeRate(currencySet.getCurrency("American Dollar"), currencySet.getCurrency("Sterling Pound"), new Fraction(18, 10)));
+        ExchangeRateSet.add(new ExchangeRate(currencySet.getCurrency("Euro"), currencySet.getCurrency("USD"), new Fraction(10, 16)));
+        ExchangeRateSet.add(new ExchangeRate(currencySet.getCurrency("Sterling Pound"), currencySet.getCurrency("EUR"), new Fraction(10, 14)));
+        ExchangeRateSet.add(new ExchangeRate(currencySet.getCurrency("American Dollar"), currencySet.getCurrency("GBP"), new Fraction(18, 10)));
     }
 }

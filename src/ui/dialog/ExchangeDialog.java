@@ -1,5 +1,8 @@
 package ui.dialog;
 
-public class ExchangeDialog {
-    //TODO
+import model.Exchange;
+
+public interface ExchangeDialog {
+
+        public Exchange getExchange();
 }

@@ -9,6 +9,10 @@ public class Money {
         this.currency = currency;
     }
 
+    public Money(double amount, Currency fromCurrency) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public Fraction getAmount() {
         return amount;
     }

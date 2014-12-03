@@ -1,5 +1,11 @@
 package ui.display;
 
+import javax.swing.JFrame;
+
 public class ExchangeUI {
-//TODO    
+    static JFrame frame;
+    
+    public ExchangeUI(){
+        frame = new JFrame("Money Calculator");
+    }
 }
