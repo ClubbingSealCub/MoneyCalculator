@@ -1,17 +1,15 @@
 package control;
 
+import model.Money;
 import ui.dialog.ExchangeDialog;
 
 public class ExchangeOperation {
 
-    private final ExchangeDialog exchangeDialog;
-
-    public ExchangeOperation(ExchangeDialog exchangeDialog) {
-        this.exchangeDialog = exchangeDialog;
+    // TO DO 
+    public ExchangeOperation(Money money) {
     }
     
     public void execute(){
-        System.out.println(exchangeDialog.getExchange().getMoney().getAmount());
     }
     
 }
