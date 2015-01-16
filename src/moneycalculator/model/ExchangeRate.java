@@ -1,12 +1,12 @@
-package model;
+package moneycalculator.model;
 
 public class ExchangeRate {
 
     private final Currency from;
     private final Currency to;
-    private final Fraction rate;
+    private final Double rate;
 
-    public ExchangeRate(Currency from, Currency to, Fraction rate) {
+    public ExchangeRate(Currency from, Currency to, Double rate) {
         this.from = from;
         this.to = to;
         this.rate = rate;
@@ -20,7 +20,7 @@ public class ExchangeRate {
         return to;
     }
 
-    public Fraction getRate() {
+    public double getRate() {
         return rate;
     }
 }

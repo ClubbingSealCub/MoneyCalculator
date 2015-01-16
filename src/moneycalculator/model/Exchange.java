@@ -1,8 +1,9 @@
-package model;
+package moneycalculator.model;
 
 public class Exchange {
     
-    private final Money money;
+    public final Money money;
+    public final Currency currency;
 
     public Exchange(Money money, Currency currency) {
         this.money = money;
@@ -16,6 +17,5 @@ public class Exchange {
     public Currency getCurrency() {
         return currency;
     }
-    private final Currency currency;
     
 }
